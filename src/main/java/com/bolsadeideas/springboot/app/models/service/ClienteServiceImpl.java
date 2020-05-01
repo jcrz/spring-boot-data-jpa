@@ -1,3 +1,8 @@
+/* ClienteServiceImpl:
+ * Es una buena practica, ya que permite utilizar diferentes entity's (Dao). En este caso
+ * se utiliza 'clienteDao' el cual utiliza los metodos del CRUDREPOSITORY ya que extiende de él.
+ * */
+
 package com.bolsadeideas.springboot.app.models.service;
 
 import java.util.List;
@@ -21,7 +26,7 @@ public class ClienteServiceImpl implements IClienteService{
 	@Override
 	@Transactional(readOnly=true)
 	public List<Cliente> findAll() {
-		return (List<Cliente>) clienteDao.findAll();
+		return (List<Cliente>) clienteDao.findAll(); 
 	}
 
 	
